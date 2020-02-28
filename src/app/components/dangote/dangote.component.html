@@ -1,1 +1,61 @@
-<p>dangote works!</p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<nav class="navbar navbar-expand-sm bg-light">
+	
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="">Registration</a>
+    </li>
+  </ul>
+  
+</nav>
+<br>
+<div class="container">
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../assets/pictures/finance/financeSchool.jpg" alt="money" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>Join Us!</h3>
+      </div>   
+    </div>
+
+    </div>
+  </div>
+<div>
+	<br>
+	<div>
+      <h2 class="jumbotron font-weight-bolder">{{secondInstituteId.name}}</h2>
+	</div>
+</div>
+  <br>
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Information</th>
+      <th>Speciality</th>
+      <th class="text-right">Address</th>
+    </tr>
+    <tr>
+      <td>
+        {{secondInstituteId.information}}
+      </td>
+      <td>
+        {{secondInstituteId.speciality}}
+      </td>
+      <td class="text-right">
+        {{secondInstituteId.address}}
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
+</div>

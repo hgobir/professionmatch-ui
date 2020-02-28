@@ -6,6 +6,10 @@ import { ViewRegistrationComponent } from './components/view-registration/view-r
 import { InstituteComponent } from './components/institute/institute.component';
 import { BushComponent } from './components/bush/bush.component';
 import { MatchComponent } from './components/match/match.component';
+import { DangoteComponent } from './components/dangote/dangote.component';
+import { GatesComponent } from './components/gates/gates.component';
+import { CooksComponent } from './components/cooks/cooks.component';
+import { TsujiComponent } from './components/tsuji/tsuji.component';
 
 const routes: Routes = [
   {
@@ -20,17 +24,25 @@ const routes: Routes = [
     path: 'bush',
     component: BushComponent
   },
+    {
+    path: 'dangote',
+    component: DangoteComponent
+  },
+    {
+    path: 'gates',
+    component: GatesComponent
+  },
+  {
+    path: 'cooks',
+    component: CooksComponent
+  },
+  {
+    path: 'tsuji',
+    component: TsujiComponent
+  },
   {
     path: 'institute',
     component: InstituteComponent
-  },
-  {
-    path: 'admin/view/:id',
-    component: ViewRegistrationComponent
-  },
-  {
-    path: 'admin',
-    component: AdminComponent
   }
 ];
 

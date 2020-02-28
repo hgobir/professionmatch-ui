@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InstituteService } from 'src/app/services/institute.service';
+
 
 @Component({
   selector: 'app-gates',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GatesComponent implements OnInit {
 
-  constructor() { }
+  public fifthInstituteId;
 
-  ngOnInit(): void {
+  constructor(private instituteService: InstituteService) { }
+
+  ngOnInit() {
+    this.getFifthInstitute();
   }
 
+    getFifthInstitute() {
+    this.instituteService.getInstitute(5).subscribe(
+      data => {
+        this.fifthInstituteId = data;
+      },
+      err => console.error(err),
+      () => console.log('fifth institute loaded')
+    )
+  }
 }

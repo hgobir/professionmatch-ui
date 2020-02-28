@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InstituteService } from 'src/app/services/institute.service';
+
 
 @Component({
   selector: 'app-cooks',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CooksComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  public fourthInstituteId;
+
+  constructor(private instituteService: InstituteService) { }
+
+  ngOnInit() {
+    this.getFourthInstitute();
+  }
+
+    getFourthInstitute() {
+    this.instituteService.getInstitute(4).subscribe(
+      data => {
+        this.fourthInstituteId = data;
+      },
+      err => console.error(err),
+      () => console.log('fourth institute loaded')
+    )
   }
 
 }

@@ -46,7 +46,7 @@
     </div> 
 
        <div class="form-group">
-      <label>Dangote School of Finance</label> 
+      <label><a [routerLink]="['/dangote']">Dangote School of Finance</a></label> 
       <select class="form-control" id="i2" formControlName="institute2" >
         <option value="">Please select a rank</option>
         <option *ngFor="let r of ranks"
@@ -58,7 +58,7 @@
 
 
        <div class="form-group">
-      <label>Tsuji Culinary School</label> 
+      <label><a [routerLink]="['/tsuji']">Tsuji Culinary School</a></label> 
       <select class="form-control" id="i3" formControlName="institute3" >
         <option value="">Please select a rank</option>
         <option *ngFor="let r of ranks"
@@ -69,7 +69,7 @@
     </div> 
 
    <div class="form-group">
-      <label>Captain Cooks Sailing Gymnasium</label> 
+      <label><a [routerLink]="['/cooks']">Captain Cooks Sailing Gymnasium</a></label> 
       <select class="form-control" id="i4" formControlName="institute4" >
         <option value="">Please select a rank</option>
         <option *ngFor="let r of ranks"
@@ -80,7 +80,7 @@
     </div> 
 
     <div class="form-group">
-      <label>Gates Technical Polytechnic</label>
+      <label><a [routerLink]="['/gates']">Gates Technical Polytechnic</a></label>
       <select class="form-control" formControlName="institute5" >
         <option value="">Please select a rank</option>
         <option *ngFor="let r of ranks"
