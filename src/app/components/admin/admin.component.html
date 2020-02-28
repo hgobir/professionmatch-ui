@@ -1,0 +1,39 @@
+<div class="container">
+
+<nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="">Registration</a>
+    </li>
+  </ul>
+</nav>
+<br>
+<div class="container">
+
+
+
+
+
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Owner Name</th>
+      <th>Email</th>
+      <th>Model</th>
+      <th class="text-right">Purchase Price</th>
+    </tr>
+    <tr *ngFor="let bike of bikes">
+      <td>
+        <a [routerLink]="['/admin/view', bike.id]">{{bike.name}}</a>
+      </td>
+      <td>
+        {{bike.email}}
+      </td>
+      <td>
+        {{bike.model}}
+      </td>
+      <td class="text-right">
+        {{bike.purchasePrice}}
+      </td>
+    </tr>
+  </table>
+</div>

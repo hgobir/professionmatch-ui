@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="">Registration</a>
+    </li>
+  </ul>
+</nav>
+<br>
+<div class="container">
+
+
+<div class="container-fluid">
+  <h1 class="font-weight-bolder">Institutes we Support</h1>
+  <br>
+  <p>Here at Profomatchit we work with the organisations that at the cutting edge of their respective industries</p>
+  <br>
+  <p>You can always gurantee that where ever the match making algorithm selects you will have industry leading support around you</p>
+  <br>
+
+<h2>Below are 5 hand picked institutions we allocate and admit budding proffessionals</h2>
+
+</div>
+
+<div>
+
+</div>
+  <br>
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Institution</th>
+      <th>Information</th>
+      <th>Speciality</th>
+      <th class="text-right">Address</th>
+    </tr>
+    <tr *ngFor="let institute of institutes">
+      <td>
+        {{institute.name}}
+      </td>
+      <td>
+        {{institute.information}}
+      </td>
+      <td>
+        {{institute.speciality}}
+      </td>
+      <td class="text-right">
+        {{institute.address}}
+      </td>
+    </tr>
+  </table>
+</div>

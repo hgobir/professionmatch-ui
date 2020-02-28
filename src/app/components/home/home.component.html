@@ -1,0 +1,104 @@
+<div class="container">
+
+  <div class="container-fluid">
+  <h1 class="font-weight-bolder">Welcome</h1>
+  <br>
+  <p>Enter your details and rank the schools below and witness the award winning stable marriage algorithm at work!</p>
+  <br>
+
+</div>
+
+    <form [formGroup]="userform" (ngSubmit)="submitUserRegistration()" novalidate>
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info">{{validMessage}}</h3>
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" formControlName="username" required/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password" required/>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email" required/>
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" formControlName="name" required/>
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" class="form-control" formControlName="age" required/>
+    </div>
+
+   <div class="form-group">
+      <label><a [routerLink]="['/bush']">Bushs All American Academy</a></label> 
+      <select class="form-control" id="i1" formControlName="institute1" >
+        <option value="">Please select a rank</option>
+        <option *ngFor="let r of ranks"
+                [value]="r">
+                {{r}}
+        </option>
+      </select>
+    </div> 
+
+       <div class="form-group">
+      <label>Dangote School of Finance</label> 
+      <select class="form-control" id="i2" formControlName="institute2" >
+        <option value="">Please select a rank</option>
+        <option *ngFor="let r of ranks"
+                [value]="r">
+                {{r}}
+        </option>
+      </select>
+    </div> 
+
+
+       <div class="form-group">
+      <label>Tsuji Culinary School</label> 
+      <select class="form-control" id="i3" formControlName="institute3" >
+        <option value="">Please select a rank</option>
+        <option *ngFor="let r of ranks"
+                [value]="r">
+                {{r}}
+        </option>
+      </select>
+    </div> 
+
+   <div class="form-group">
+      <label>Captain Cooks Sailing Gymnasium</label> 
+      <select class="form-control" id="i4" formControlName="institute4" >
+        <option value="">Please select a rank</option>
+        <option *ngFor="let r of ranks"
+                [value]="r">
+                {{r}}
+        </option>
+      </select>
+    </div> 
+
+    <div class="form-group">
+      <label>Gates Technical Polytechnic</label>
+      <select class="form-control" formControlName="institute5" >
+        <option value="">Please select a rank</option>
+        <option *ngFor="let r of ranks"
+                [value]="r">
+                {{r}}
+        </option>
+      </select>
+    </div>
+    <div *ngIf="validSubmissionNumberMessage != ''">
+      <h3 class="has-info">{{validSubmissionNumberMessage}}</h3>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+
+    <button type="button" [disabled]="!validNumberOfSubmissions" class="btn btn-primary" [routerLink]="['match']" >Check Matches</button>
+    
+  </form>
+
+
+
+
+</div>
